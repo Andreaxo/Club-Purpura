@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background-color: #E0DAF7;
+}
+
+.navbar {
+    background-image: url(/img/BANNER.png), linear-gradient(to right, #9C14D8, #520B72);
+    background-size: cover;
+    background-blend-mode: normal;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Uso de auto-fit y minmax para un diseño flexible */
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    padding: 2vh 2vw; /* Unidades relativas para el padding */
+}
+
+a, .home {
+    text-decoration: none;
+    color: white;
+}
+
+.home {
+    display: flex;
+    background-color: #C282DE;
+    padding: 0.5vh 0.5vw; /* Unidades relativas para el padding */
+    justify-content: center; /* Centrar el contenido */
+    width: 80%; /* Ajustar el ancho al 80% del contenedor padre */
+    max-width: 1200px; /* Establecer un ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    border-radius: 20px;
+    
+}
+
+.home-1 {
+    margin-right: 2vw; /* Unidades relativas para el margin */
+}
+
+.main {
+    position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 0.5vh 0.5vw;
+    background-color: #ffffff66; /* Color de fondo de respaldo */
+    overflow: hidden; /* Asegura que el pseudo-elemento no se salga del contenedor */
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: url('/img/img/pexels-sims1217-12195429.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 1; /* Ajustar la opacidad según sea necesario */
+    z-index: -1; /* Asegurarse de que el pseudo-elemento esté detrás del contenido */
+}
+
+.titulo{
+    color: #9C14D8;
+    font-size: 50px;
+}
+
+.subtitulo{
+    font-weight: bold;
+    color: black;
+}
+
+.subtitulo_1{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+.voluntarios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(2,100px);
+    background: url(/img/img/fondo_voluntarios.png);
+    text-align: center;
+    padding: 10px;
+}
+
+
+.imagenes{
+    background-color: #2FB2C3;
+    grid-row: 1/3;
+    border-radius: 50px;
+    padding: 5px;
+    opacity: 0.7; /* Opacidad del contenedor */
+}
+
+
+
+.voluntario_1{
+    margin: 10px;
+    border-radius: 130px;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    margin-bottom: 5vw;
+}
+
+.voluntario_2{
+    grid-column: 7/8;
+    grid-row: 1/3;
+    margin: 10px;
+    margin-bottom: 5vw;
+}
+
+.sub_text_2{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.text_1{
+    margin: 20px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.quienes_somos{
+    position: relative;
+    color: black; /* Color del texto */
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+.quienes_somos::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/img/img/pexels-polinachistyakova-9341741.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5; /* Opacidad de la imagen */
+    filter: brightness(0.7); /* Ajuste de brillo para el color */
+    z-index: -1;
+}
+
+.imagenes_quienes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.titulo_somos{
+    font-size:30px;
+    margin: 20px;
+}
+
+p{
+    font-weight:500;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: auto;
+
+    background-color: #6D0E96;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.redes, .adoptar, .donaciones {
+    margin: 10px 0;
+}
+
+.donaciones {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagenes_donaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagenes_donaciones a {
+    display: flex;
+    align-items: center;
+}
+
+.imagenes_donaciones img {
+    display: block;
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de las imágenes */
+}
+
+
+@media (max-width: 1280px) {
+    .voluntario_2 {
+        display: none;
+    }
+}
+
+
+/* ADOPCIONES */
+
+.adopta_main{
+    text-align: center;
+    margin: 40px;
+    background-image: url(/img/img/gatos_cp.png);
+    background-size: cover;
+    border-radius: 10px;
+    height:240px;
+
+}
+
+.nota{
+    text-align: center;
+    background-color: #6D0E96;
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    width: 50%;
+    max-width: 600px; /* Ajusta según tus necesidades */
+    min-width: 300px; /* Ajusta según tus necesidades */
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.texto_adopciones{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
